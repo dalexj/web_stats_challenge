@@ -24,6 +24,11 @@ class Visit < Sequel::Model
     @values[:hash]
   end
 
+  def before_save
+    self.created_at = self.created_at.to_date
+    super
+  end
+
   private
 
   def create_hash
