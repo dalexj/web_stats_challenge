@@ -7,7 +7,6 @@ class Visit < Sequel::Model
 
   def after_create
     create_hash
-    save
     super
   end
 
@@ -19,6 +18,7 @@ class Visit < Sequel::Model
 
   def create_hash
     self.hash = Digest::MD5.hexdigest(columns_to_digest)
+    save
   end
 
   def columns_to_digest
