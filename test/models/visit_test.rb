@@ -30,4 +30,10 @@ class VisitTest < ActiveSupport::TestCase
     assert visit.digested_hash
   end
 
+  def test_converts_created_at_to_date_on_save
+    visit = Visit.new(url: valid_url, created_at: Time.parse("2015-04-28 12:12:12 -0600"))
+    visit.save
+    assert_equal Time.parse("2015-04-28 00:00:00 -0600"), visit.created_at
+  end
+
 end
