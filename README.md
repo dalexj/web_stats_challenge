@@ -20,4 +20,4 @@ Tests are run with `bundle exec rake`, might require `RAILS_ENV=test bundle exec
 
 ## Problems
 
-The current `/top_referrers` runs many queries (see commit efdafac1dc47f0d6aed237528f22d4a1c0c38b0e). If the sql ran could gather the referrers at the same time as top urls, this will probably be greatly improved
+The current `/top_referrers` runs many queries (see commit [efdafa](https://github.com/dalexj/web_stats_challenge/commit/efdafac1dc47f0d6aed237528f22d4a1c0c38b0e) ). If the sql ran could gather the referrers at the same time as top urls, this will probably be greatly improved
