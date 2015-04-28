@@ -1,6 +1,5 @@
 class StatsController < ApplicationController
   def top_urls
-    visits = Visit.all
     render json: visits_in_last_n_days(5)
   end
 
