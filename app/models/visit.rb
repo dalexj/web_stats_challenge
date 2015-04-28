@@ -1,5 +1,15 @@
 class Visit < Sequel::Model
   plugin :validation_helpers
+
+  # this method returns data in the following format
+  # [
+  #   {:url=>"https://example.com/", :visits=>1},
+  #   {:url=>"https://example.com/2", :visits=>2}
+  # ]
+  def self.counts_on_date(date)
+    Visit.db["SELECT `url`, count(*) as visits FROM `visits` WHERE (`created_at` = ?) GROUP BY `url` ORDER BY `visits` DESC", date].all
+  end
+
   def validate
     super
     validates_presence [:url, :created_at]
