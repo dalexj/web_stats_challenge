@@ -1,0 +1,10 @@
+.infobox {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 2px;
+  padding: 5px;
+}
+
+.toggle {
+  margin-bottom: 10px;
+}
