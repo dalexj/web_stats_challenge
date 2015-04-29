@@ -1,0 +1,22 @@
+<center><h1>Web Stats</h1></center>
+<div class="container">
+  <div ng-controller="VisitsController">
+
+    <div class="col-md-6">
+      <center>
+        <h3>Top Urls</h3>
+        <a href="#" class="btn btn-default toggle" data-id="top-urls">Show/Hide</a>
+      </center>
+      <pre id="top-urls">{{ topUrls }}</pre>
+    </div>
+
+    <div class="col-md-6">
+      <center>
+        <h3>Top Referrers</h3>
+        <a href="#" class="btn btn-default toggle" data-id="top-referrers">Show/Hide</a>
+      </center>
+      <pre id="top-referrers">{{ topReferrers }}</pre>
+    </div>
+
+  </div>
+</div>
